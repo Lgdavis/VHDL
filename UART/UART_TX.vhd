@@ -1,25 +1,21 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-<<<<<<< HEAD
 entity UART_TX is
 
 generic(data_width 	:= 8;
 		baud_rate	:= 9600
 		bitIndex_max:= data_width + 3;);
 		--clk_freq	:= 50000);
-=======
 entity UART is
 
 generic(data_width 	:= 8;
 		baud_rate	:= 9600
 		clk_freq	:= 50000);
->>>>>>> d0c4b757264c7d1482a50e40e007921a764fe819
 
 port	(clk		: in std_logic;
 		 tx_en		: in std_logic;
 		 rst		: in std_logic;
-<<<<<<< HEAD
 		 data		: in std_logic_vector [data_width -1 downto 0];
 		 rdy		: out std_logic;
 		 baudSel	: out std_logic_vector [1 downto 0]
@@ -39,7 +35,6 @@ signal bitIndex	: integer range 0 TO bitIndex_max
 
 constant bitIndex_max	: integer := data_width + 1;
 constant baud_timer 	: integer := 100000000/baud_rate;
-=======
 		 tx_data	: out std_logic_vector [data_width -1 downto 0];
 		 rdy		: out std_logic;
 		 baudSel	: out std_logic_vector [1 downto 0]
@@ -48,13 +43,9 @@ end UART_tx
 
 architecture struct of UART is
 
- 
->>>>>>> d0c4b757264c7d1482a50e40e007921a764fe819
-
 
 begin
 
-<<<<<<< HEAD
 	process (clk)
 	begin
 		
@@ -105,6 +96,3 @@ begin
 
 end behavioural
 =======
-
->>>>>>> d0c4b757264c7d1482a50e40e007921a764fe819
-
